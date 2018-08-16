@@ -35,7 +35,7 @@ log() {
 
 # Function: SNAPSHOT all volumes attached to this instance.
 snapshot_volumes() {
-	for VOLUME_ID in $VOLUME_LIST; do
+	for VOLUME_ID in "${VOLUME_LIST[@]}; do
 		log "Volume ID is $VOLUME_ID"
 
 		# Get the attched device name to add to the description so we can easily tell which volume this is.
